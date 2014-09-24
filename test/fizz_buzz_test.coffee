@@ -20,3 +20,15 @@ describe 'Fizzbuzz', ->
 
   it 'knows that 1 is not divisible by 15', ->
     expect(@fizzbuzz.isDivisibleByFifteen(1)).to.be.false
+
+  it 'will print "Fizzbuzz" for numbers divisible by 15', ->
+    expect(@fizzbuzz.fizzbuzz(15)).to.equal('Fizzbuzz')
+
+  it 'will print "Fizz" for numbers divisible by 3', ->
+    expect(@fizzbuzz.fizzbuzz(3)).to.equal('Fizz')
+
+  it 'will print "Buzz" for numbers divisible by 5', ->
+    expect(@fizzbuzz.fizzbuzz(5)).to.equal('Buzz')
+
+  it 'will print 1 for numbers not divisible by 3, 5 or 15', ->
+    expect(@fizzbuzz.fizzbuzz(1)).to.equal(1)
